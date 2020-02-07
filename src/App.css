@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.MuiFormControl-root {
+    margin: 10px 0 !important;
+    width: 40%;
+}
+
+.radio-group {
+    display: flex;
+}
+
+.form-checkbox {
+    display: flex;
+}
+
+.header {
+    background-color: #4d5f71;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header-link {
+    font-size: 20px;
+    font-weight: 700;
+    color: lightgrey;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.page-title {
+    text-align: center;
+}
