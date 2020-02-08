@@ -17,12 +17,12 @@ export const Form = () => {
   } = useForm(submitted, validate);
 
   function submitted() {
-    console.log("submitted successfully");
+    console.log(values, gender, checked);
   }
 
   return (
     <Fragment>
-      <h1 className="page-title">Form Validation with useForm</h1>
+      <h1 className="page-title">Basic React Form Validation</h1>
       <form onSubmit={handleSubmit} noValidate>
         <div className="form">
           <TextField

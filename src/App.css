@@ -50,3 +50,11 @@ body {
 .page-title {
     text-align: center;
 }
+
+.checkbox-wrap {
+    display: flex;
+}
+
+.form-field-error {
+    color: red;
+}
