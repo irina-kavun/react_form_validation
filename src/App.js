@@ -1,22 +1,29 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
+import {Provider} from 'react-redux';
+import store from './store';
+
+import {Header} from './commons/Header';
 import {Form} from './pages/Form';
 import {FormikForm} from "./pages/FormikForm";
-import {Header} from './commons/Header';
+import {ReduxForm} from "./pages/ReduxForm";
 
 import './App.css';
 
 export const App = () => {
   return (
-    <Router>
-      <div>
-        <Header/>
-        <Switch>
-          <Route exact path='/' component={Form}/>
-          <Route path='/form_2' component={FormikForm}/>
-        </Switch>
-      </div>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <div>
+          <Header/>
+          <Switch>
+            <Route exact path='/' component={Form}/>
+            <Route path='/form_2' component={FormikForm}/>
+            <Route path='/form_3' component={ReduxForm}/>
+          </Switch>
+        </div>
+      </Router>
+    </Provider>
   );
 };
