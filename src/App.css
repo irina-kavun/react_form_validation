@@ -47,6 +47,10 @@ body {
     margin: 0 15px;
 }
 
+.active {
+    color: #45b39d;
+}
+
 .page-title {
     text-align: center;
 }
@@ -57,4 +61,18 @@ body {
 
 .form-field-error {
     color: red;
+}
+
+.text-field-wrap {
+    display: contents;
+}
+.select-age {
+    width: 150px;
+}
+
+.button-block {
+    padding-top: 30px;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
 }

@@ -13,5 +13,9 @@ export const validate = values => {
     errors.password = "Password is required"
   }
 
+  if(!values.age) {
+    errors.age = "Age is required"
+  }
+
   return errors;
 };

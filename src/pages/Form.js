@@ -23,8 +23,7 @@ export const Form = () => {
   return (
     <Fragment>
       <h1 className="page-title">Basic React Form Validation</h1>
-      <form onSubmit={handleSubmit} noValidate>
-        <div className="form">
+      <form className="form" onSubmit={handleSubmit} noValidate>
           <TextField
             required
             name="name"
@@ -70,7 +69,6 @@ export const Form = () => {
             <p>A checkbox is a GUI widget that permits the user to make a binary choice</p>
           </div>
           <Button type="submit" variant="contained">SUBMIT</Button>
-        </div>
       </form>
     </Fragment>
   );
