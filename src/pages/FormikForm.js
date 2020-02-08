@@ -60,7 +60,7 @@ export const FormikForm = () => {
               type="password"
               label="Password"
             />
-            <div className="single-checkbox-wrap">
+            <div className="checkbox-wrap">
               <Field name="consent" type="checkbox" as={Checkbox}/>
               <p>Your consent is required here</p>
             </div>

@@ -6,8 +6,10 @@ import store from './store';
 
 import {Header} from './commons/Header';
 import {Form} from './pages/Form';
+
 import {FormikForm} from "./pages/FormikForm";
 import {ReduxForm} from "./pages/ReduxForm";
+
 
 import './App.css';
 

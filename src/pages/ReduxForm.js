@@ -1,8 +1,7 @@
 import React from 'react';
-import {}
 
-export const ReaduxForm = () => {
+export const ReduxForm = () => {
   return(
-
+    <h1>Hello</h1>
   )
 };
