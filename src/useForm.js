@@ -19,7 +19,7 @@ export const useForm = (callback, validate) => {
     })
   };
 
-  const handleCheck = event => setChecked(event.target.checked);
+  const handleCheck = () => setChecked(!checked);
   const handleRadioSelect = value => setGender(value);
 
   const handleSubmit = event => {
@@ -32,7 +32,7 @@ export const useForm = (callback, validate) => {
     if(Object.keys(errors).length === 0 && isSubmitting) {
       callback();
     }
-  }, [errors, isSubmitting, callback]);
+  }, [errors]);
 
   return {
     values,

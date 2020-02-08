@@ -8,15 +8,17 @@ export const RadioButtonsGroup = ({ gender, handleRadioSelect }) => {
       <FormControl component="fieldset" >
         <RadioGroup
           aria-label="gender"
-          name="gender1"
+          name="gender"
           value={gender}
           onChange={event => handleRadioSelect(event.target.value)}>
           <FormControlLabel
+            name='female'
             value ='female'
             control={<Radio />}
             label="Female"
           />
           <FormControlLabel
+            name='female'
             value='male'
             control={<Radio />}
             label="Male"

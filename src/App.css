@@ -47,6 +47,39 @@ body {
     margin: 0 15px;
 }
 
+.header-link:active {
+    color: #f1ad1d;
+}
+
 .page-title {
     text-align: center;
+}
+
+.checkbox-container {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #4d5f71;
+}
+
+.form-checkbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-wrap {
+    display: flex;
+}
+
+.form-field-error {
+    color: red;
+}
+
+.single-checkbox-wrap {
+    display: flex;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
 }
