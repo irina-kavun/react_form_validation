@@ -10,11 +10,12 @@ const CustomRadio = ({label, ...props}) => {
   )
 };
 
-const CustomTextField = ({variant, label, autoComplete, ...props}) => {
+const CustomTextField = ({label, ...props}) => {
   const [field, meta] = useField(props);
   const errorText = meta.error && meta.touched ? meta.error : "";
   return (
     <TextField
+      required
       {...field}
       variant="outlined"
       label={label}
@@ -43,8 +44,8 @@ export const FormikForm = () => {
         setSubmitting(false);
       }}
       >
-        {({values, errors }) => (
-          <Form className="form">
+        {({values, errors, handleReset}) => (
+          <Form className="form" noValidate>
             <CustomTextField
               name="name"
               type="input"
@@ -52,7 +53,7 @@ export const FormikForm = () => {
             />
             <CustomTextField
               name="email"
-              type="input"
+              type="email"
               label="Email"
             />
             <CustomTextField
@@ -69,11 +70,14 @@ export const FormikForm = () => {
               <CustomRadio name="auth" type="radio" value="authorized" label="authorised"/>
               <CustomRadio name="auth" type="radio" value="unauthorized" label="unauthorised"/>
             </div>
-            <Button type="submit" variant="contained">SUBMIT</Button>
-            <pre>
-              {/*{JSON.stringify(values, null, 2)}*/}
-              {/*{JSON.stringify(errors, null, 2)}*/}
-            </pre>
+            <div className="button-block">
+              <Button type="submit" variant="contained">
+                Submit
+              </Button>
+              <Button type="button" variant="contained" onClick={handleReset}>
+                Clear Values
+              </Button>
+            </div>
           </Form>
         )}
       </Formik>

@@ -1,13 +1,12 @@
 import { createStore, combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
 
-const reducers = {
+const rootReducer = combineReducers({
   form: formReducer
-};
+});
 
-const reducer = combineReducers(reducers);
 const store = createStore(
-  reducer,
+  rootReducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
