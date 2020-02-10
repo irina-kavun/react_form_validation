@@ -1,7 +1,7 @@
 import React from 'react';
 import {Field, reduxForm} from "redux-form";
-import {TextField, Button, InputLabel, FormControl, Select, FormHelperText} from '@material-ui/core';
-import {validate} from '../utils/validation/validate';
+import {TextField, Button, InputLabel, FormControl, Select, FormHelperText} from '@material-ui/core/index';
+import {validate} from '../../utils/validation/validate';
 
 
 const renderField = ({input, label, type, meta }) => {
@@ -47,9 +47,7 @@ const renderSelect = ({input, meta}) => {
   )
 };
 
-const onSubmit = values => {
-  console.log(values);
-};
+const onSubmit = values => console.log(values);
 
 export const ReduxForm = reduxForm({
   form: 'registration',

@@ -1,7 +1,7 @@
 import React from 'react';
-import {Formik, Field, Form, useField} from 'formik';
-import {Button, TextField, Checkbox, FormControlLabel, Radio} from "@material-ui/core";
-import {validationSchema} from '../utils/validation/validationSchema';
+import {Formik, Field, Form, useField} from 'formik/dist/index';
+import {Button, TextField, Checkbox, FormControlLabel, Radio} from "@material-ui/core/index";
+import {validationSchema} from '../../utils/validation/validationSchema';
 
 const CustomRadio = ({label, ...props}) => {
   const [field] = useField(props);
@@ -37,12 +37,12 @@ export const FormikForm = () => {
         consent: true,
         auth: "authorized",
       }} validationSchema={validationSchema}
-              onSubmit={(data, {setSubmitting}) => {
-        setSubmitting(true);
-
-        console.log(data);
-        setSubmitting(false);
-      }}
+              onSubmit={(data, {setSubmitting, resetForm}) => {
+                setSubmitting(true);
+                console.log(data);
+                resetForm({});
+                setSubmitting(false);
+              }}
       >
         {({values, errors, handleReset}) => (
           <Form className="form" noValidate>
@@ -65,7 +65,7 @@ export const FormikForm = () => {
               <Field name="consent" type="checkbox" as={Checkbox}/>
               <p>Your consent is required here</p>
             </div>
-              {errors.consent && <p className="form-field-error">{errors.consent}</p>}
+            {errors.consent && <p className="form-field-error">{errors.consent}</p>}
             <div className="radio-group">
               <CustomRadio name="auth" type="radio" value="authorized" label="authorised"/>
               <CustomRadio name="auth" type="radio" value="unauthorized" label="unauthorised"/>
